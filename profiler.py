@@ -18,6 +18,7 @@ def profile_query():
     Create the profile of a query, the performance it have in the database.
     """
 
+
 if __name__ == '__main__':
     conn = get_db_connection()
     if conn:

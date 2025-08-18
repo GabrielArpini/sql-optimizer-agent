@@ -2,11 +2,11 @@ services:
   db:
     image: postgres:15
     restart: always
-    shm_size: 128mb
+    shm_size: 256mb
     environment:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: admin
-      POSTGRES_DB: tpch
+      POSTGRES_DB: iot_metrics
     ports:
       - "5432:5432"
     volumes:
@@ -20,15 +20,5 @@ services:
     depends_on:
       - db
 
-  populator:
-    build:
-      context: .
-      dockerfile: Dockerfile.populator
-    depends_on:
-      - db 
-    environment:
-      DATABASE_URL: "postgresql://admin:admin@db:5432/tpch"
-
 volumes:
   postgres_data:
-

@@ -5,7 +5,13 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "accelerate>=1.10.0",
+    "faker>=37.5.3",
+    "huggingface-hub[cli]>=0.34.4",
+    "kaggle>=1.7.4.5",
+    "kagglehub>=0.3.12",
     "psycopg2-binary>=2.9.10",
     "python-dotenv>=1.1.1",
     "requests>=2.32.4",
+    "transformers>=4.55.2",
 ]
